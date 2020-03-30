@@ -1,21 +1,15 @@
 import React from 'react';
 import './App.css';
+import StoresList from './components/StoresList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Bienvenido a "comprá desde casa"
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          acceder
-        </a>
+        <p> Buscá comercios</p>
+        <input type="text"/>
+        
+        <StoresList />
       </header>
     </div>
   );
