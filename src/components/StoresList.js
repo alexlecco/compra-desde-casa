@@ -3,11 +3,13 @@ import StoreCard from './StoreCard';
 
 export default class StoresList extends Component {
     render() {
+        const { stores } = this.props;
+
         return (
             <Fragment>
-                <StoreCard />
-                <StoreCard />
-                <StoreCard />
+                {
+                    stores.map(store => <StoreCard store={store} />)
+                }
             </Fragment>
         )
     }

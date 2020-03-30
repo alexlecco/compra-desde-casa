@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import StoresList from './components/StoresList';
+import stores from './data.json'; 
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <p> Buscá comercios</p>
         <input type="text"/>
         
-        <StoresList />
+        <StoresList stores={stores} />
       </header>
     </div>
   );
