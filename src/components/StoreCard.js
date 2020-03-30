@@ -1,15 +1,15 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component,  } from 'react';
 
 export default class StoreCard extends Component {
     render() {
         const { store } = this.props;
 
         return (
-            <Fragment>
-                <p>local: {store.name}</p>
-                <p>dirección: {store.address}</p>
-                <p>telefono: {store.phone}</p>
-            </Fragment>
+            <div className="storeCard">
+                <p><strong>local: </strong>{store.name}</p>
+                <p><strong>dirección: </strong>{store.address}</p>
+                <p><strong>telefono: </strong>{store.phone}</p>
+            </div>
         )
     }
 }
