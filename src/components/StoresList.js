@@ -7,9 +7,7 @@ export default class StoresList extends Component {
 
         return (
             <Fragment>
-                {
-                    stores.map(store => <StoreCard store={store} />)
-                }
+                { stores.map(store => <StoreCard store={store} key={store.id} />) }
             </Fragment>
         )
     }
