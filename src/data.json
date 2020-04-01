@@ -8,7 +8,7 @@
         "phone": "4389593",
         "cellphone": "3813768594",
         "opening_hours": "9 - 15 hs",
-        "accepts_credit": true,
+        "accepts_credit": false,
         "accepts_debit": true,
         "category_id": 0
     },
@@ -22,7 +22,7 @@
         "cellphone": "3813059384",
         "opening_hours": "9 - 15 hs",
         "accepts_credit": true,
-        "accepts_debit": true,
+        "accepts_debit": false,
         "category_id": 0
     },
     {
@@ -47,8 +47,8 @@
         "phone": "4235567",
         "cellphone": "3814494959",
         "opening_hours": "9 - 15 hs",
-        "accepts_credit": true,
-        "accepts_debit": true,
+        "accepts_credit": false,
+        "accepts_debit": false,
         "category_id": 0
     },
     {
