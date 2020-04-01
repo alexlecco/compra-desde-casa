@@ -9,19 +9,20 @@ export default class SearchBar extends Component {
     handleChange(e) {
         let currentStores = [];
         let newStores = [];
+        let term = e.target.value;
     
-        if (e.target.value !== '') {
+        if (term !== '' && term.length > 2) {
             currentStores = this.props.stores;
             newStores = currentStores.filter(item => {
                 const lc = item.name.toLowerCase();
-                const filter = e.target.value.toLowerCase();
+                const filter = term.toLowerCase();
                 return lc.includes(filter);
             });
         } else {
             newStores = this.props.stores;
         }
         
-        this.props.updateList(newStores, e.target.value)
+        this.props.updateList(newStores, term)
     }
 
     render() {
