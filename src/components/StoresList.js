@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import StoreCard from './StoreCard';
 
 export default class StoresList extends Component {
@@ -6,9 +6,9 @@ export default class StoresList extends Component {
         const { stores } = this.props;
 
         return (
-            <Fragment>
-                { stores.map(store => <StoreCard store={store} key={store.id} />) }
-            </Fragment>
+            <div className="flex flex-wrap">
+                { stores.map(store => <StoreCard className="p-2" store={store} key={store.id} />) }
+            </div>
         )
     }
 }
