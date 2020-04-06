@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import StoresList from './components/StoresList';
 import SearchBar from './components/SearchBar';
-import data from './data.json';
 
 const EmptyState = () => <div> Sin resultados </div>
 
 const Results = (props) => {
-  const resultText = props.number === 1 ? 'resultado' : 'resultados'
-  
   if(props.number === 0) return <EmptyState />
-  
+
+  const resultText = props.number === 1 ? 'resultado' : 'resultados'  
   return (props.filteredStores !== props.stores || props.term.length > 2) ?
     (<div> {props.number} {resultText} </div>)
     :
@@ -21,11 +19,19 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stores: [...data],
-      filteredStores: [...data],
+      stores: [],
+      filteredStores: [],
       term: ''
     }
     this.updateList = this.updateList.bind(this)
+  }
+
+  componentDidMount() {
+    const req = 'http://167.99.228.107/api/stores';
+
+    fetch(req)
+      .then(res => res.json())
+      .then(data => this.setState({ stores: [...data], filteredStores: [...data] }));
   }
 
   updateList(newList, term) {
