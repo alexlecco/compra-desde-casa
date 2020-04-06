@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "cuit": "30-71500212-0",
+        "name": "Negocio 1",
+        "address": "Salta 560",
+        "email": "negocio1@gmail.com",
+        "phone": "3816112233",
+        "cellphone": "3816445566",
+        "openingHours": "09:00 - 12:00",
+        "acceptDebit": true,
+        "acceptCredit": false,
+        "categoryId": 1
+    },
+    {
+        "id": 2,
+        "cuit": "30-71605520-1",
+        "name": "Negocio 2",
+        "address": "Junin 125",
+        "email": "negocio2@gmail.com",
+        "phone": "3816223344",
+        "cellphone": "3816998877",
+        "openingHours": "09:00 - 21:00",
+        "acceptDebit": true,
+        "acceptCredit": true,
+        "categoryId": 2
+    }
+]

@@ -7,10 +7,10 @@
         "email": "sircokoc@gmail.com",
         "phone": "4389593",
         "cellphone": "3813768594",
-        "opening_hours": "9 - 15 hs",
-        "accepts_credit": false,
-        "accepts_debit": true,
-        "category_id": 0
+        "openingHours": "9 - 15 hs",
+        "acceptDebit": false,
+        "acceptCredit": true,
+        "categoryId": 0
     },
     {
         "id": 1,
@@ -20,10 +20,10 @@
         "email": "almacenpepe@gmail.com",
         "phone": "4585849",
         "cellphone": "3813059384",
-        "opening_hours": "9 - 15 hs",
-        "accepts_credit": true,
-        "accepts_debit": false,
-        "category_id": 0
+        "openingHours": "9 - 15 hs",
+        "acceptDebit": true,
+        "acceptCredit": false,
+        "categoryId": 0
     },
     {
         "id": 2,
@@ -33,10 +33,10 @@
         "email": "sanjavier@gmail.com",
         "phone": "4392837",
         "cellphone": "3813304958",
-        "opening_hours": "9 - 15 hs",
-        "accepts_credit": true,
-        "accepts_debit": true,
-        "category_id": 0
+        "openingHours": "9 - 15 hs",
+        "acceptDebit": true,
+        "acceptCredit": true,
+        "categoryId": 0
     },
     {
         "id": 3,
@@ -46,10 +46,10 @@
         "email": "fernando@gmail.com",
         "phone": "4235567",
         "cellphone": "3814494959",
-        "opening_hours": "9 - 15 hs",
-        "accepts_credit": false,
-        "accepts_debit": false,
-        "category_id": 0
+        "openingHours": "9 - 15 hs",
+        "acceptDebit": false,
+        "acceptCredit": false,
+        "categoryId": 0
     },
     {
         "id": 4,
@@ -59,9 +59,9 @@
         "email": "moe@gmail.com",
         "phone": "4236364",
         "cellphone": "3814593849",
-        "opening_hours": "9 - 15 hs",
-        "accepts_credit": true,
-        "accepts_debit": true,
-        "category_id": 0
+        "openingHours": "9 - 15 hs",
+        "acceptDebit": true,
+        "acceptCredit": true,
+        "categoryId": 0
     }
 ]

@@ -14,8 +14,8 @@ export default class StoreCard extends Component {
 
     render() {
         const { store } = this.props;
-        const creditText = store.accepts_credit ? "acepta" : "no acepta";
-        const debitText = store.accepts_debit ? "acepta" : "no acepta";
+        const creditText = store.acceptCredit ? "acepta" : "no acepta";
+        const debitText = store.acceptDebit ? "acepta" : "no acepta";
         const changeCollapsed = () => this.changeCollapsed();
 
         return (
@@ -29,7 +29,7 @@ export default class StoreCard extends Component {
                             <div /> :
                             <div>
                                 <p><strong>fijo: </strong>{store.phone}</p>
-                                <p><strong>atención: </strong>{store.opening_hours}</p>
+                                <p><strong>atención: </strong>{store.openingHours}</p>
                                 <p><strong>tarjetas de credito: </strong>{creditText}</p>
                                 <p><strong>tarjetas de debito: </strong>{debitText}</p>
                             </div>
