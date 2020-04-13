@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import StoresList from './components/StoresList';
 import SearchBar from './components/SearchBar';
+import Header from './components/Header';
 
 const EmptyState = () => <div> Sin resultados </div>
 
@@ -50,16 +51,22 @@ export default class App extends Component {
 
     return (
       <div className="App md:p-20 p-5">
-        <SearchBar updateList={updateList} stores={stores}/>
-        
-        <Results
-          filteredStores={filteredStores.length}
-          stores={stores.length}
-          number={filteredStores.length}
-          term={term}
-        />
-        
-        <StoresList stores={filteredStores} />
+        <div className="container">
+          <Header />
+        </div>
+
+        <div className="container">
+          <SearchBar updateList={updateList} stores={stores}/>
+          
+          <Results
+            filteredStores={filteredStores.length}
+            stores={stores.length}
+            number={filteredStores.length}
+            term={term}
+          />
+          
+          <StoresList stores={filteredStores} />
+        </div>
       </div>
     )
   }
