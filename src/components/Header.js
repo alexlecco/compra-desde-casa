@@ -18,12 +18,14 @@ export default class Header extends Component {
                 <div className="">
                     <div className="">
                         <ul className="flex relative lg:flex-no-wrap flex-wrap">
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Inicio</li>
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Acerca de</li>
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Servicios</li>
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Equipo</li>
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Portfolio</li>
-                            <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Contacto</li>
+                            <div className="flex lg:flex-no-wrap flex-wrap lg:w-4/5">
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Inicio</li>
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Acerca de</li>
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Servicios</li>
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Equipo</li>
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Portfolio</li>
+                                <li className={`${menuItemClassName} w-1/2 lg:text-left text-center`}>Contacto</li>
+                            </div>
                             <div className="flex mx-auto lg:mt-3 lg:my-5 lg:absolute lg:inset-y-0 lg:right-0 lg:mr-3">
                                 <img src={twitter} alt="twitter" className={`${socialClassName}`} />
                                 <img src={facebook} alt="facebook" className={`${socialClassName}`} />
