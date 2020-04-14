@@ -39,12 +39,12 @@ export default class SearchBar extends Component {
 
     render() {
         const { term, number, stores, filteredStores } = this.props;
-        const buttonClassName = "bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6";
+        const buttonClassName = "bg-white text-black px-5 py-2 lg:mx-1 my-2 text-sm lg:w-1/6 w-1/2";
 
         return (
-            <div className="md:p-2 lg:flex">
+            <div className="md:p-2 lg:flex lg:mx-0 mx-2">
                 <div className="lg:w-2/3">
-                    <div className="lg:w-full lg:flex">
+                    <div className="lg:w-full lg:flex lg:flex-no-wrap flex-wrap">
                         <button className={buttonClassName}>Almacen</button>
                         <button className={buttonClassName}>Carnicería</button>
                         <button className={buttonClassName}>Comida</button>
