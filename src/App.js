@@ -29,7 +29,6 @@ export default class App extends Component {
 
   componentDidMount() {
     const req = 'http://167.99.228.107/api/stores';
-
     fetch(req)
       .then(res => res.json())
       .then(data => this.setState({ stores: [...data], filteredStores: [...data] }));

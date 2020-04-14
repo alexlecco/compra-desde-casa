@@ -26,24 +26,25 @@ export default class SearchBar extends Component {
     }
 
     render() {
+        const buttonClassName = "bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6";
         return (
             <div className="md:p-2 lg:flex">
                 <div className="lg:w-2/3">
                     <div className="lg:w-full lg:flex">
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 1</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 2</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 3</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 4</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 5</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 6</button>
+                        <button className={buttonClassName}>Almacen</button>
+                        <button className={buttonClassName}>Carnicería</button>
+                        <button className={buttonClassName}>Comida</button>
+                        <button className={buttonClassName}>Farmacia</button>
+                        <button className={buttonClassName}>Ferretería</button>
+                        <button className={buttonClassName}>Forrajería</button>
                     </div>
                     <div className="lg:w-full lg:flex">
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 7</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 8</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 9</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 10</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 11</button>
-                        <button className="bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6">categoria 12</button>
+                        <button className={buttonClassName}>Heladería</button>
+                        <button className={buttonClassName}>Panadería</button>
+                        <button className={buttonClassName}>Pollería</button>
+                        <button className={buttonClassName}>Sandwichería</button>
+                        <button className={buttonClassName}>Verdulería</button>
+                        <button className={buttonClassName}>Otros</button>
                     </div>
                 </div>
                 <div className="lg:w-1/3">
