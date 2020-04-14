@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import text from '../constants/text';
 
 const EmptyState = () => <div> Sin resultados </div>
 
@@ -62,10 +63,10 @@ export default class SearchBar extends Component {
                     </div>
                 </div>
                 <div className="lg:w-1/3 lg:mx-5">
-                    <p> Buscá comercios </p>
+                    <p> {text.searchText} </p>
                     <input 
                         type="text"
-                        placeholder="almacenes, farmacias y mas..."
+                        placeholder={text.textFieldPlaceholder}
                         className="search-input p-2 w-full"
                         onChange={this.handleChange}
                     />
