@@ -62,8 +62,8 @@ export default class App extends Component {
           <StoresList stores={filteredStores} />
         </div>
 
-        <div className="lg:flex lg:justify-between table-auto">
-          <div className="lg:w-1/4 lg:mr-1 table-cell">
+        <div className="flex lg:flex-no-wrap flex-wrap lg:justify-between lg:table-auto">
+          <div className="lg:w-1/4 w-full lg:mr-1 mr-0 table-cell mb-3">
             <InfoCard
               title={"Información importante"}
               color={palette.color5}
@@ -71,7 +71,7 @@ export default class App extends Component {
               image={infoCard1}
             />
           </div>
-          <div className="lg:w-1/4 lg:ml-2 lg:mr-2 table-cell">
+          <div className="lg:w-1/4 w-full lg:ml-2 lg:mr-2 table-cell mb-3">
             <InfoCard
               title={"Si tu comercio hace delivery ¡sumalo!"}
               color={palette.color6}
@@ -79,7 +79,7 @@ export default class App extends Component {
               text={text.largeText}
             />
           </div>
-          <div className="lg:w-1/4 lg:ml-1 lg:mr-2">
+          <div className="lg:w-1/4 w-full lg:ml-1 lg:mr-2 table-cell mb-3">
             <InfoCard
               title={"Todos por el hospital"}
               color={palette.color7}
@@ -87,7 +87,7 @@ export default class App extends Component {
               image={infoCard2}
             />
           </div>
-          <div className="lg:w-1/4 lg:ml-1">
+          <div className="lg:w-1/4 w-full lg:ml-1 table-cell mb-3">
             <InfoCard
               title={"Aislamiento social, preventivo y obligatorio"} 
               color={palette.color8}
