@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import StoresList from './components/StoresList';
 import SearchBar from './components/SearchBar';
 import Header from './components/Header';
+import InfoCard from './components/InfoCard';
+
+import palette from './constants/palette';
+import text from './constants/text';
+
+import infoCard1 from './assets/infoCard1.JPG';
+import infoCard2 from './assets/infoCard2.JPG';
 
 export default class App extends Component {
   constructor(props) {
@@ -35,6 +43,7 @@ export default class App extends Component {
   render() {
     const { filteredStores, stores, term } = this.state;
     const updateList = this.updateList.bind(this);
+    console.log("text:::::::::::", text)
 
     return (
       <div className="App md:p-20 p-5">
@@ -51,6 +60,41 @@ export default class App extends Component {
             term={term}
           />    
           <StoresList stores={filteredStores} />
+        </div>
+
+        <div className="lg:flex lg:justify-between table-auto">
+          <div className="lg:w-1/4 lg:mr-1 table-cell">
+            <InfoCard
+              title={"Información importante"}
+              color={palette.color5}
+              buttonText={"Más Información"}
+              image={infoCard1}
+            />
+          </div>
+          <div className="lg:w-1/4 lg:ml-2 lg:mr-2 table-cell">
+            <InfoCard
+              title={"Si tu comercio hace delivery ¡sumalo!"}
+              color={palette.color6}
+              buttonText={"Sumar mi negocio"}
+              text={text.largeText}
+            />
+          </div>
+          <div className="lg:w-1/4 lg:ml-1 lg:mr-2">
+            <InfoCard
+              title={"Todos por el hospital"}
+              color={palette.color7}
+              buttonText={"Doná ahora"}
+              image={infoCard2}
+            />
+          </div>
+          <div className="lg:w-1/4 lg:ml-1">
+            <InfoCard
+              title={"Aislamiento social, preventivo y obligatorio"} 
+              color={palette.color8}
+              buttonText={"Conocé más sobre esta medida"}
+              text={text.largeText}
+            />
+          </div>
         </div>
       </div>
     )
