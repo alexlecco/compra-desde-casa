@@ -4,18 +4,6 @@ import StoresList from './components/StoresList';
 import SearchBar from './components/SearchBar';
 import Header from './components/Header';
 
-const EmptyState = () => <div> Sin resultados </div>
-
-const Results = (props) => {
-  if(props.number === 0) return <EmptyState />
-
-  const resultText = props.number === 1 ? 'resultado' : 'resultados'  
-  return (props.filteredStores !== props.stores || props.term.length > 2) ?
-    (<div> {props.number} {resultText} </div>)
-    :
-    (<div />)
-}
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -55,15 +43,13 @@ export default class App extends Component {
         </div>
 
         <div className="container">
-          <SearchBar updateList={updateList} stores={stores}/>
-          
-          <Results
-            filteredStores={filteredStores.length}
-            stores={stores.length}
+          <SearchBar
+            updateList={updateList}
+            stores={stores}
+            filteredStores={filteredStores}
             number={filteredStores.length}
             term={term}
-          />
-          
+          />    
           <StoresList stores={filteredStores} />
         </div>
       </div>

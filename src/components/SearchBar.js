@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 
+const EmptyState = () => <div> Sin resultados </div>
+
+const Results = (props) => {
+    if(props.number === 0) return <EmptyState />
+  
+    const resultText = props.number === 1 ? 'resultado' : 'resultados'  
+    return (props.filteredStores !== props.stores || props.term.length > 2) ?
+      (<div> {props.number} {resultText} </div>)
+      :
+      (<div />)
+}
+
 export default class SearchBar extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +38,9 @@ export default class SearchBar extends Component {
     }
 
     render() {
+        const { term, number, stores, filteredStores } = this.props;
         const buttonClassName = "bg-white text-black px-5 py-2 mx-1 my-2 text-sm w-1/6";
+
         return (
             <div className="md:p-2 lg:flex">
                 <div className="lg:w-2/3">
@@ -47,13 +61,19 @@ export default class SearchBar extends Component {
                         <button className={buttonClassName}>Otros</button>
                     </div>
                 </div>
-                <div className="lg:w-1/3">
+                <div className="lg:w-1/3 lg:mx-5">
                     <p> Buscá comercios </p>
                     <input 
                         type="text"
                         placeholder="almacenes, farmacias y mas..."
                         className="search-input p-2 w-full"
                         onChange={this.handleChange}
+                    />
+                    <Results
+                        filteredStores={filteredStores}
+                        stores={stores}
+                        number={number}
+                        term={term}
                     />
                 </div>
             </div>
