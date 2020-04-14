@@ -51,3 +51,7 @@
 .search-input {
   color: black;
 }
+
+.info-card {
+  min-height: 430px;
+}
